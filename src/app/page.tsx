@@ -2,7 +2,8 @@
 
 import { useRouter } from "next/navigation"
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { Canvas } from "@react-three/fiber";
 
 export default function Home () {
   const router = useRouter();
@@ -10,18 +11,19 @@ export default function Home () {
   const [y, setY] = useState(10);
   const [rotate, setRotate] = useState(10);
 
-  // return (
-  //   <button type="button" onClick={() => router.push('/landing')}>
-  //     Landing
-  //   </button>
-  // )
-  return
-  (
-    <div>
-      <motion.div
-        animate={{x, y, rotate}}
-        transition={{ type: "spring" }}
-      />
-    </div>
+  return (
+     <Canvas>
+      <div className="w-full h-screen">
+        
+        <div className="w-36 h-36 border-2 border-sky-300 rounded-md m-5"></div>
+      </div>
+
+     </Canvas>
   )
+}
+
+
+const Banner = () => {
+  const ref = useRef()
+  
 }
