@@ -12,18 +12,29 @@ export default function Home () {
   const [rotate, setRotate] = useState(10);
 
   return (
-     <Canvas>
-      <div className="w-full h-screen">
-        
-        <div className="w-36 h-36 border-2 border-sky-300 rounded-md m-5"></div>
+      <div className="w-full h-screen flex-row">
+        <div className=" m-16">
+          <Cloud/>
+        </div>
+        <div className=" m-16">
+          <Cloud/>
+        </div>
+        <div className=" m-16">
+          <Cloud/>
+        </div>
       </div>
 
-     </Canvas>
   )
 }
 
 
-const Banner = () => {
-  const ref = useRef()
-  
-}
+const Cloud = () => {
+  return (
+    <div className="relative w-48 h-16 bg-white rounded-full shadow-md">
+      <div className="absolute w-24 h-24 bg-white rounded-full shadow-md -top-7 left-12"></div>
+      <div className="absolute w-24 h-24 bg-white rounded-full shadow-md -top-10 left-20"></div>
+      <div className="absolute w-24 h-24 bg-white rounded-full shadow-md -top-7 right-12"></div>
+      <div className="absolute w-24 h-24 bg-white rounded-full shadow-md -top-5 right-5"></div>
+    </div>
+  );
+};
