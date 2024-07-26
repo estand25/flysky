@@ -18,9 +18,14 @@ const config: Config = {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         },
+        move: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '55%': { transform: 'translateX(-10px)' },
+        }
       },
       animation: {
         float: 'float 3s ease-in-out infinite',
+        move: 'move 3s ease-in-out infinite',
       },
     },
   },
