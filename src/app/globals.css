@@ -30,4 +30,33 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  @keyframes bob {
+    0%, 100% { transform: translateY(0) }
+    50% { transform: translateY(-6px) }
+  }
+  .animate-bob { animation: bob 3.5s ease-in-out infinite }
+
+  @keyframes sunBob {
+    0%, 100% { transform: translateY(0) }
+    50% { transform: translateY(-10px) }
+  }
+  .animate-sun { animation: sunBob 6s ease-in-out infinite }
+
+  @keyframes drift {
+    0% { transform: translateX(-10%) }
+    100% { transform: translateX(110%) }
+  }
+  .animate-drift {
+    animation: drift var(--speed, 20s) linear infinite;
+    will-change: transform;
+  }
+
+  @keyframes wave {
+    0% { transform: translateX(0) }
+    100% { transform: translateX(-50%) }
+  }
+  .animate-wave {
+    animation: wave var(--speed, 8s) linear infinite;
+    will-change: transform;
+  }
 }
